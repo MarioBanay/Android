@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements IView {
 
@@ -27,25 +28,25 @@ public class MainActivity extends AppCompatActivity implements IView {
         btnInkrement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                presenter.inkrement(etTekst.getText().toString());
+                presenter.increment(etTekst.getText().toString());
             }
         });
 
         btnDekrement.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                presenter.dekrement(etTekst);
+                presenter.decrement(etTekst.getText().toString());
             }
         });
     }
 
     @Override
     public void showResult(String text) {
-
+        etTekst.setText(text);
     }
 
     @Override
     public void showError(String text) {
-
+        Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
     }
 }

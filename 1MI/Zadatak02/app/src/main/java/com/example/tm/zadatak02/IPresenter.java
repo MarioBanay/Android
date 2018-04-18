@@ -5,6 +5,6 @@ package com.example.tm.zadatak02;
  */
 
 public interface IPresenter {
-    void inkrement(String value);
-    void dekrement(String value);
+    void increment(String value);
+    void decrement(String value);
 }

@@ -5,5 +5,6 @@ package com.example.tm.zadatak02;
  */
 
 public interface ICalculateService {
-    void calculate(int number);
+        String increment(String s);
+        String decrement(String s);
 }
