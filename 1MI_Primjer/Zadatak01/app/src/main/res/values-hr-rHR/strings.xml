@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Zadatak 01</string>
+    <string name="btnText">Klikni me!</string>
+    <string name="etText">Unesite tekst</string>
+</resources>
