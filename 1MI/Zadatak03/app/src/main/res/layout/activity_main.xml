@@ -20,8 +20,8 @@
     <ImageView
         android:id="@+id/ivSlika"
         android:src="@mipmap/ic_launcher_foreground"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
         android:layout_gravity="center"
         />
 </FrameLayout>

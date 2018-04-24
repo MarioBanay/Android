@@ -22,17 +22,38 @@ public class MainActivity extends AppCompatActivity {
         btn = (Button) findViewById(R.id.btn);
         ivSlika = (ImageView) findViewById(R.id.ivSlika);
 
+/*        Jedan način s jednim xml-om u kojemu je set
+            btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AnimatorSet animatorSet = new AnimatorSet();
+                animatorSet = (AnimatorSet) AnimatorInflater.loadAnimator(MainActivity.this, R.animator.animator_set);
+                animatorSet.setTarget(ivSlika);
+                animatorSet.start();
+
+            }
+        });*/
+
+//      Drugi način u kojemu svaki object set ima svoj xml
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AnimatorSet transparencyAnimator = (AnimatorSet) AnimatorInflater.loadAnimator(MainActivity.this, R.animator.transparency_animator);
-                transparencyAnimator.setTarget(ivSlika);
+                AnimatorSet animatorSet2 = new AnimatorSet();
+                AnimatorSet transp = (AnimatorSet) AnimatorInflater.loadAnimator(MainActivity.this, R.animator.transparency_animator);
+                transp.setTarget(ivSlika);
+                ObjectAnimator rot = (ObjectAnimator) AnimatorInflater.loadAnimator(MainActivity.this, R.animator.rot_animator);
+                rot.setTarget(ivSlika);
+
+                animatorSet2
+                        .play(transp)
+                        .with(rot);
 
 
-
-                transparencyAnimator.start();
+                animatorSet2.start();
 
             }
         });
+
     }
 }
