@@ -5,24 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.m.zadatak03.MainActivity">
+    android:layout_margin="10dp"
+    tools:context="com.example.m.zadatak02.MainActivity">
 
     <Button
-        android:id="@+id/btn"
-        android:text="Kreni"
-
+        android:id="@+id/btnProvjeri"
+        android:text="provjeri"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <FrameLayout
+    <EditText
+        android:id="@+id/etTekst"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <ImageView
-        android:id="@+id/ivSlika"
-        android:src="@mipmap/ic_launcher_foreground"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center"
-        />
-</FrameLayout>
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tvTekst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Paran ili neparan hm?" />
+
 </LinearLayout>

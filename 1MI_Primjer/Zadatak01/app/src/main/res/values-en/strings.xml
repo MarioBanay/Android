@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Example 01</string>
+    <string name="btnText">Click me!</string>
+    <string name="etText">Enter text</string>
+</resources>
